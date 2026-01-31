@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# tree.je - Simple, Private File Conversion
 
-## Getting Started
+A browser-based file conversion website built with Next.js. All file conversions happen locally in the browser - no uploads, no tracking, complete privacy.
 
-First, run the development server:
+## 🎨 Design Philosophy
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Minimal & Classy**: Clean, premium design inspired by tpot.cc and lnk.ad
+- **Green Theme**: Professional soft green color palette (#2d5f3f)
+- **Typography**: 
+  - **Headings**: Instrument Serif (elegant, professional)
+  - **Body**: Inter (clean, modern)
+- **No Gradients**: Clean white/light gray backgrounds
+- **Generous Spacing**: Breathing room for content
+- **Subtle Animations**: Smooth hover effects only
+- **Fully Responsive**: Optimized for mobile, tablet, laptop (1024px+), and large desktop (1440px+)
+  - Mobile-first approach with progressive enhancement
+  - 1-column grid on mobile
+  - 2-column grid on tablets (768px+)
+  - 3-column grid on laptops (1024px+)
+  - Enhanced spacing and typography scaling on large desktops (1440px+)
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: CSS Modules (no Tailwind)
+- **Fonts**: Google Fonts (Inter + Instrument Serif)
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles & design tokens
+│   ├── layout.tsx            # Root layout with fonts
+│   ├── page.tsx              # Homepage
+│   ├── page.module.css       # Homepage styles
+│   └── tools/
+│       └── pdf-to-image/     # Sample tool page
+│           ├── page.tsx
+│           └── page.module.css
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Homepage
+1. **Header**: Simple text logo "tree.je"
+2. **Hero Section**: 
+   - Tagline: "Simple, private file conversion."
+   - Subtext about browser-based & privacy
+   - Primary CTA: "Choose file"
+3. **Tools Grid**: Clean grid of conversion tools
+   - PDF converters (PDF to Image, TXT to PDF, HTML to PDF, Image to PDF)
+   - Image converters (JPG/PNG, WEBP, SVG, etc.)
+4. **Privacy Line**: Reinforces local processing
+5. **Minimal Footer**: Copyright info
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Tool Pages
+- Consistent design with homepage
+- Back navigation
+- Upload area with drag & drop UI
+- Options (format, quality)
+- Convert button
+- Same typography and green theme
 
-## Learn More
+## 🎨 Design Tokens
 
-To learn more about Next.js, take a look at the following resources:
+```css
+/* Colors */
+--color-primary: #2d5f3f          /* Main green */
+--color-primary-light: #3d7a52    /* Hover green */
+--color-primary-lighter: #e8f5e9  /* Light green bg */
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+/* Typography */
+--font-heading: 'Instrument Serif'
+--font-body: 'Inter'
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/* Spacing */
+--spacing-sm: 1rem
+--spacing-md: 1.5rem
+--spacing-lg: 2rem
+--spacing-xl: 3rem
 
-## Deploy on Vercel
+/* Border Radius */
+--radius-md: 12px
+--radius-lg: 16px
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Getting Started
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## 📝 Brand Tone
+
+- Quiet confidence
+- Professional & modern
+- No marketing fluff
+- Focus on trust and simplicity
+
+## 🔒 Privacy First
+
+All file conversions happen locally in the browser using JavaScript. Your files never leave your device, ensuring complete privacy and security.
+
+---
+
+**tree.je** — Simple, private file conversion.

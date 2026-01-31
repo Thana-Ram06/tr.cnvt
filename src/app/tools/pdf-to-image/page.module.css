@@ -1,0 +1,341 @@
+.main {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md);
+    background-color: var(--color-bg);
+    transition: background-color var(--transition-base);
+}
+
+/* Tool Container */
+.toolContainer {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+    flex: 1;
+}
+
+.backLink {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    transition: color var(--transition-base);
+}
+
+.backLink:hover {
+    color: var(--color-primary);
+}
+
+.toolTitle {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.01em;
+}
+
+.toolDescription {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Upload Area */
+.uploadArea {
+    position: relative;
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    background-color: var(--color-surface-elevated);
+}
+
+.uploadArea:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-lighter);
+}
+
+.fileInput {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.uploadVisual {
+    width: 48px;
+    height: 36px;
+    margin: 0 auto var(--spacing-sm);
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--color-border) 0%, var(--color-gray-300) 100%);
+    border: 1px solid var(--color-border);
+}
+
+.uploadText {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.uploadHint {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+.errorText {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: #b91c1c;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Options */
+.options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.optionGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.optionGroup label {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.select {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.select:hover {
+    border-color: var(--color-text-muted);
+}
+
+.select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-lighter);
+}
+
+/* Convert Button */
+.convertButton {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.875rem 2rem;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    border: none;
+}
+
+.convertButton:hover:not(:disabled) {
+    background-color: var(--color-primary-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(45, 95, 63, 0.2);
+}
+
+.convertButton:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.convertButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+}
+
+.footer p {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+/* Responsive Design - Tablet (768px and up) */
+@media (min-width: 768px) {
+    .main {
+        padding: var(--spacing-lg) var(--spacing-xl);
+    }
+
+    .toolContainer {
+        max-width: 720px;
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .backLink {
+        font-size: 0.9375rem;
+    }
+
+    .toolTitle {
+        font-size: 2.5rem;
+    }
+
+    .toolDescription {
+        font-size: 1rem;
+    }
+
+    .uploadArea {
+        padding: var(--spacing-2xl) var(--spacing-xl);
+    }
+
+.uploadVisual {
+    width: 56px;
+    height: 42px;
+}
+
+    .uploadText {
+        font-size: 1rem;
+    }
+
+    .uploadHint {
+        font-size: 0.875rem;
+    }
+
+    .options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .optionGroup label {
+        font-size: 0.9375rem;
+    }
+
+    .select {
+        font-size: 1rem;
+    }
+
+    .convertButton {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .footer {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .footer p {
+        font-size: 0.875rem;
+    }
+}
+
+/* Responsive Design - Laptop (1024px and up) */
+@media (min-width: 1024px) {
+    .main {
+        padding: var(--spacing-xl) var(--spacing-2xl);
+    }
+
+    .toolContainer {
+        max-width: 800px;
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+
+    .toolTitle {
+        font-size: 2.75rem;
+    }
+
+    .toolDescription {
+        font-size: 1.0625rem;
+    }
+
+    .uploadArea {
+        padding: 3rem var(--spacing-2xl);
+    }
+
+.uploadVisual {
+    width: 64px;
+    height: 48px;
+}
+
+    .uploadText {
+        font-size: 1.0625rem;
+    }
+
+    .convertButton {
+        font-size: 1.0625rem;
+        padding: 1.125rem 2.5rem;
+    }
+}
+
+/* Responsive Design - Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+    .main {
+        padding: var(--spacing-2xl) var(--spacing-3xl);
+    }
+
+    .toolContainer {
+        max-width: 880px;
+    }
+
+    .backLink {
+        font-size: 1rem;
+    }
+
+    .toolTitle {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .toolDescription {
+        font-size: 1.125rem;
+    }
+
+.uploadVisual {
+    width: 72px;
+    height: 54px;
+}
+
+    .uploadText {
+        font-size: 1.125rem;
+    }
+
+    .uploadHint {
+        font-size: 0.9375rem;
+    }
+
+    .options {
+        gap: var(--spacing-lg);
+    }
+
+    .convertButton {
+        padding: 1.25rem 3rem;
+    }
+
+    .footer p {
+        font-size: 0.9375rem;
+    }
+}
